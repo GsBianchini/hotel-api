@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from './user.entity'; // Corrigido para importar a entidade User corretamente
-import { UserService } from './user.service'; // Corrigido para importar o UserService
-import { UsersController } from './user.controller'; // Corrigido para importar o UsersController corretamente
+import { User } from './user.entity'; 
+import { UserService } from './user.service'; 
+import { UsersController } from './user.controller'; 
 
 @Module({
-  imports: [TypeOrmModule.forFeature([User])], // Corrigido para importar a entidade User
+  imports: [TypeOrmModule.forFeature([User])], 
   controllers: [UsersController],
-  providers: [UserService], // Corrigido para usar UserService
+  providers: [UserService], 
 })
 export class UsersModule {}
